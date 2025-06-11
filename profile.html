@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Profile - HookUp Connect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ff69b4;
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .profile-info h3 {
+      margin-bottom: 5px;
+      color: #ff69b4;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+      color: #bbb;
+    }
+
+    .actions {
+      margin-top: 30px;
+    }
+
+    .actions a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background: #ff69b4;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .actions a:hover {
+      background: #ff85c1;
+    }
+
+    /* Light Theme */
+    .light-theme {
+      background-color: #f9f9f9;
+      color: #111;
+    }
+
+    .light-theme .profile-container {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .light-theme header {
+      background-color: #ddd;
+      color: #000;
+    }
+
+    .light-theme nav a {
+      color: #000;
+    }
+
+    .light-theme .profile-info p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>My Profile</h2>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+</header>
+
+<div class="profile-container">
+  <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic" />
+  <div class="profile-info">
+    <h3 id="username">User</h3>
+    <p>Email: <span id="email">user@example.com</span></p>
+    <p>Bio: Just living my best life ❤️</p>
+  </div>
+  <div class="actions">
+    <a href="upload.html">Upload New Pictures</a>
+    <a href="mymessages.html">My Messages</a>
+  </div>
+</div>
+
+<script>
+  // Load profile data from localStorage
+  const name = localStorage.getItem("username") || "User";
+  const email = localStorage.getItem("email") || "user@example.com";
+  const theme = localStorage.getItem("theme") || "dark";
+
+  document.getElementById("username").textContent = name;
+  document.getElementById("email").textContent = email;
+
+  // Apply light theme if selected
+  if (theme === "light") {
+    document.body.classList.add("light-theme");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout - HookUp Connect</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #ff69b4;
+    }
+
+    .logout-button {
+      width: 80px;
+      height: 80px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logout-button:hover {
+      background-color: #ff85c1;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Are you sure you want to log out?</h1>
+  <form action="signin.html">
+    <button class="logout-button" title="Logout">⎋</button>
+  </form>
+  <a href="index.html" class="back-link">Back to Home</a>
+
+</body>
+</html>
